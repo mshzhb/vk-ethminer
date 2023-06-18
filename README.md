@@ -11,7 +11,6 @@
 
 * mining with Vulkan API
 * on-GPU DAG generation (no more DAG files on disk)
-* stratum mining without proxy
 * zero dev fee
 
 
