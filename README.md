@@ -1,14 +1,14 @@
-# Vulkan-ethminer
+# VKminer
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 
 > Ethereum/Ethereum Classic miner with Vulkan support
 
-**Vulkan-ethminer** is the first an Ethash GPU mining worker based on Vulkan: with the miner you can mine every coin which relies on an Ethash Proof of Work thus including Ethereum (deprecated), Ethereum Classic, Metaverse, Musicoin, Ellaism, Pirl, Expanse and others. This is the actively maintained version of Vulkan-ethminer. It originates from [cpp-ethereum] project (where GPU mining has been discontinued) and builds on vulkan api. This project should be able to build on most of the platforms with VK support.
+**VKminer** is the first an Etcash GPU mining worker based on Vulkan: with the miner you can mine every coin which relies on an Etcash Proof of Work thus including Ethereum (deprecated), Ethereum Classic, Metaverse, Musicoin, Ellaism, Pirl, Expanse and others. This is the actively maintained version of Vulkan-ethminer. It originates from [cpp-ethereum] project (where GPU mining has been discontinued) and builds on vulkan api. This project should be able to build on most of the platforms with VK support.
 
 ## Features
 
-* Vulkan mining
+* mining with Vulkan API
 * on-GPU DAG generation (no more DAG files on disk)
 * stratum mining without proxy
 * zero dev fee
@@ -27,13 +27,13 @@
 ## Install
 
 Standalone **executables** for *Linux*, *macOS* and *Windows* are provided in
-the [Releases](https://github.com/mshzhb/vulkan-ethminer/releases) section.
+the [Releases](https://github.com/mshzhb/vk-ethminer/releases) section.
 Download an archive for your operating system and unpack the content to a place
 accessible from command line. The ethminer is ready to go.
 
 ## Usage
 
-The **vulkan-ethminer** is a command line program. This means you launch it either
+The **vkminer** is a command line program. This means you launch it either
 from a Windows command prompt or Linux console, or create shortcuts to
 predefined command lines using a Linux Bash script or Windows batch/cmd file.
 For a full list of available command, please run:
