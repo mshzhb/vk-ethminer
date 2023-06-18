@@ -5,6 +5,7 @@
 > This eth/etc miner supports nvidia, amd, intel, adreno, mali, img and apple M1 GPUs. It also the first miner available on android.
 
 **VKminer** is the first an Etcash GPU mining worker based on Vulkan: with the miner you can mine every coin which relies on an Etcash Proof of Work thus including Ethereum (deprecated), Ethereum Classic, Metaverse, Musicoin, Ellaism, Pirl, Expanse and others. This is the actively maintained version of Vulkan-ethminer.
+This project is still under development. If you have interest in this project and want to commint to this project, please contact: mshzhb@gmail.com
 
 ## Features
 
