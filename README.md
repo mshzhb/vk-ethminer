@@ -4,7 +4,7 @@
 
 > Ethereum/Ethereum Classic miner with Vulkan support
 
-**VKminer** is the first an Etcash GPU mining worker based on Vulkan: with the miner you can mine every coin which relies on an Etcash Proof of Work thus including Ethereum (deprecated), Ethereum Classic, Metaverse, Musicoin, Ellaism, Pirl, Expanse and others. This is the actively maintained version of Vulkan-ethminer. It originates from [cpp-ethereum] project (where GPU mining has been discontinued) and builds on vulkan api. This project should be able to build on most of the platforms with VK support.
+**VKminer** is the first an Etcash GPU mining worker based on Vulkan: with the miner you can mine every coin which relies on an Etcash Proof of Work thus including Ethereum (deprecated), Ethereum Classic, Metaverse, Musicoin, Ellaism, Pirl, Expanse and others. This is the actively maintained version of Vulkan-ethminer. **This eth/etc miner supports nvidia, amd, intel, adreno, mali, img and apple M1 GPUs. It also the first miner available on android.**
 
 ## Features
 
@@ -26,7 +26,7 @@
 
 ## Install
 
-Standalone **executables** for *Linux*, *macOS* and *Windows* are provided in
+Standalone **executables** for *Android*, *Linux*, *macOS* and *Windows* are provided in
 the [Releases](https://github.com/mshzhb/vk-ethminer/releases) section.
 Download an archive for your operating system and unpack the content to a place
 accessible from command line. The ethminer is ready to go.
