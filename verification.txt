@@ -1,0 +1,187 @@
+#input:
+header = "0x214914e1de29ad0d910cdf31845f73ad534fb2d294e387cd22927392758cc334";
+difficulty = "0x00ff1c01710000000000000000000000d1ff1c01710000000000000000000000";
+seed = "510e4e770828ddbf7f7b00ab00a9f6adaf81c0dc9cc85f1f8249c256942d61d9"; //epoch = 2
+nounce = 0x00000000;
+block_num = 12423113;
+
+cache_size = 0x000000000103ffc0
+dataset_size = 0x0000000040ffef80
+
+#dataset memVerify
+0x00000000: 0xbccb5bc4
+0x00000004: 0xe14ff2a4
+0x00000008: 0xa7fbaf6c
+0x0000000c: 0x83cf83f1
+0x00000010: 0x28bff92e
+0x00000014: 0x1b97934d
+0x00000018: 0xed528842
+0x0000001c: 0x7b5eb4a3
+
+0x3fffffe0: 0x25ac5169
+0x3fffffe4: 0x398ef96c
+0x3fffffe8: 0x47dc0bd1
+0x3fffffec: 0xe9a15cfd
+0x3ffffff0: 0x04805240
+0x3ffffff4: 0xad7ab64f
+0x3ffffff8: 0xa22b9969
+0x3ffffffc: 0xe40b9ee7
+
+#shader hash memVerify
+
+UINT m_batchSize = COMPUTE_SHADER_NUM_THREADS << 15;
+round 0:
+state[0]: 0xe855c470
+state[1]: 0x2cf6f023
+state[2]: 0xd83fca39
+state[3]: 0xb840d195
+state[4]: 0x5865d379
+state[5]: 0x7031716f
+state[6]: 0xcddf8e79
+state[7]: 0xd73d4863
+state[8]: 0xd070c330
+state[9]: 0x9d8bc6e6
+state[a]: 0x65e0bbed
+state[b]: 0x1bbb26c6
+state[c]: 0x3f6ff960
+state[d]: 0x07933c74
+state[e]: 0x87c2f763
+state[f]: 0x5c8fd69e
+
+round 1:
+state[0]: 0x6ce9d7fe
+state[1]: 0x965fbb38
+state[2]: 0xb8210165
+state[3]: 0x051d4b4a
+state[4]: 0x255d689e
+state[5]: 0x5a0987e8
+state[6]: 0xc0b3dea3
+state[7]: 0xb518ff36
+state[8]: 0x1d12c0b9
+state[9]: 0xea92539a
+state[a]: 0x9a909b31
+state[b]: 0x7f9c5039
+state[c]: 0x701e1e18
+state[d]: 0x7f5c4fc6
+state[e]: 0xbc432190
+state[f]: 0x1c938843
+
+round 2:
+state[0]: 0x6c7e3a54
+state[1]: 0xeac68efb
+state[2]: 0x6a5d902e
+state[3]: 0xc4d28f7a
+state[4]: 0x86fbe790
+state[5]: 0x3e22f044
+state[6]: 0x445a08ff
+state[7]: 0xf0d91f3d
+state[8]: 0x22b1cb90
+state[9]: 0x9cf93c79
+state[a]: 0x1f899bb7
+state[b]: 0x69497f91
+state[c]: 0x782161c8
+state[d]: 0xaf7d1d3f
+state[e]: 0x9afd49c8
+state[f]: 0xecf7ce0e
+
+round 3:
+state[0]: 0x35f03e0e
+state[1]: 0x738b4e84
+state[2]: 0x60bb3e98
+state[3]: 0x81b715d8
+state[4]: 0xfa21aead
+state[5]: 0x6e1bd0d5
+state[6]: 0x9d60217b
+state[7]: 0xdde43b83
+state[8]: 0x43f439d7
+state[9]: 0xfe591dbb
+state[a]: 0x34487dac
+state[b]: 0x07166bd2
+state[c]: 0x460d8053
+state[d]: 0x40188055
+state[e]: 0xc688a275
+state[f]: 0x2b58d29b
+
+
+#shader break point
+1.
+/*************
+	uint2 state[25];
+	initHeaderNonce(state, gid);
+	if (gid.x == 0)
+		for (uint i = 0; i < 8; i++)
+			mineResult[0].state[i] = state[i];
+**************/
+state[0]: 0xe1144921
+state[1]: 0x0dad29de
+state[2]: 0x31df0c91
+state[3]: 0xad735f84
+state[4]: 0xd2b24f53
+state[5]: 0xcd87e394
+state[6]: 0x92739222
+state[7]: 0x34c38c75
+state[8]: 0x00000000
+state[9]: 0x00000000
+state[a]: 0x00000001
+state[b]: 0x00000000
+state[c]: 0x00000000
+state[d]: 0x00000000
+state[e]: 0x00000000
+state[f]: 0x00000000
+
+2.
+/************
+	//sha3_512
+	keccak(state);
+	if (gid.x == 0)
+		for (uint i = 0; i < 8; i++)
+			mineResult[0].state[i] = state[i];
+	return;
+************/
+state[0]: 0x2b1a30e4
+state[1]: 0xbdd9cb88
+state[2]: 0x61456dac
+state[3]: 0x4ff235c5
+state[4]: 0xa71bab7e
+state[5]: 0x831dc13f
+state[6]: 0xaf0d622e
+state[7]: 0x86a929a6
+state[8]: 0x8bd0c965
+state[9]: 0x0b39ff2a
+state[a]: 0x8851411a
+state[b]: 0x49cb2d27
+state[c]: 0x0ce6bed9
+state[d]: 0x93057aed
+state[e]: 0x25272a9d
+state[f]: 0x245f1ca9
+
+3.
+/************
+	....
+		//sync shared memory
+		GroupMemoryBarrierWithGroupSync();
+	}
+	if (gid.x == 0)
+		for (uint i = 0; i < 8; i++)
+			mineResult[0].state[i] = state[i];
+	return;
+
+	keccak_f1600_final(state);
+************/
+state[0]: 0x2b1a30e4
+state[1]: 0xbdd9cb88
+state[2]: 0x61456dac
+state[3]: 0x4ff235c5
+state[4]: 0xa71bab7e
+state[5]: 0x831dc13f
+state[6]: 0xaf0d622e
+state[7]: 0x86a929a6
+state[8]: 0x8bd0c965
+state[9]: 0x0b39ff2a
+state[a]: 0x8851411a
+state[b]: 0x49cb2d27
+state[c]: 0x0ce6bed9
+state[d]: 0x93057aed
+state[e]: 0x25272a9d
+state[f]: 0x245f1ca9
+

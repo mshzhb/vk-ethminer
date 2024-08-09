@@ -1,0 +1,4 @@
+Use TdrLevel if you get this error during mining: "Device lost".
+
+TdrLevel registry file will add a TdrLevel key in order to tell your driver NOT to reset after 2 second of continuous activiy.
+TdrDelay key will be removed as it seems to disable TdrLevel key.

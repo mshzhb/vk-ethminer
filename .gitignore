@@ -30,3 +30,20 @@
 *.exe
 *.out
 *.app
+
+#build
+build*
+cmake-build-debug
+out
+cmake-build*
+cmake-build-debug-llvm
+
+#IDE
+.idea
+.vs
+Folder.DotSettings.user
+.DS_Store
+
+#gsls compiler
+#glslc
+#glslc.exe
