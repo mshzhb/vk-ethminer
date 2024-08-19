@@ -92,7 +92,7 @@ requires visual studio 2019+ on windows
   
 using build script
 ``` shell
-setup.py
+py setup.py
 ```
 manual build
 ``` shell
