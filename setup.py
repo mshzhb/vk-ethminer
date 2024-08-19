@@ -14,15 +14,9 @@ if os.name == 'nt':
     with open("etc_2miners_cn.bat", "w") as file:
         file.write("::replace 0x... with your wallet\n")
         file.write("vulkan_ethminer.exe --server asia-etc.2miners.com --port 1010 --wallet 0x0D405dc4889DE1512BfdeFa0007c3b6AA468E31A --rig miner --shader wave_shuffle\n")
-    with open("etc_ethermine_asia.bat", "w") as file:
+    with open("etc_kryptex.bat", "w") as file:
         file.write("::replace 0x... with your wallet\n")
-        file.write("vulkan_ethminer.exe --server asia1-etc.ethermine.org --port 4444 --wallet 0x0D405dc4889DE1512BfdeFa0007c3b6AA468E31A --rig miner --shader wave_shuffle\n")
-    with open("etc_ethermine_eu.bat", "w") as file:
-        file.write("::replace 0x... with your wallet\n")
-        file.write("vulkan_ethminer.exe --server eu1-etc.ethermine.org --port 4444 --wallet 0x0D405dc4889DE1512BfdeFa0007c3b6AA468E31A --rig miner --shader wave_shuffle\n")
-    with open("etc_ethermine_us.bat", "w") as file:
-        file.write("::replace 0x... with your wallet\n")
-        file.write("vulkan_ethminer.exe --server us1-etc.ethermine.org --port 4444 --wallet 0x0D405dc4889DE1512BfdeFa0007c3b6AA468E31A --rig miner --shader wave_shuffle\n")
+        file.write("vulkan_ethminer.exe --server etc.kryptex.network --port 7777 --wallet 0x0D405dc4889DE1512BfdeFa0007c3b6AA468E31A --rig miner --shader wave_shuffle\n")
     os.system('tar.exe -a -c -f vulkan-ethminer-v{}-windows-amd64.zip vulkan_ethminer.exe shaders *.bat'.format(version))
 else:
     os.system('rm -rf build-release')
